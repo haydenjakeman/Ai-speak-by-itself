@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">P</div>
+      <div>
+        <h1>Pulse</h1>
+        <p id="status">AI not downloaded</p>
+      </div>
+      <span class="online-dot"></span>
+    </header>
+
+    <section class="brain-panel">
+      <h2>Your AI brain</h2>
+      <p>Download the model to let Pulse run AI tasks locally in your browser.</p>
+      <button id="downloadBtn">Download AI Brain</button>
+      <div class="progress-track">
+        <div id="progressBar"></div>
+      </div>
+      <p id="progressText">Not downloaded</p>
+    </section>
+
+    <section id="chat" aria-live="polite">
+      <div class="message pulse-message">
+        Hey! I'm Pulse. Download my AI brain to get started.
+      </div>
+    </section>
+
+    <div id="photoPreview"></div>
+
+    <section class="controls">
+      <input id="photoInput" type="file" accept="image/*" hidden>
+      <button id="photoBtn" class="secondary" aria-label="Add photo">📷</button>
+      <input id="messageInput" type="text" placeholder="Message Pulse..." autocomplete="off">
+      <button id="sendBtn" aria-label="Send message">➤</button>
+    </section>
+
+    <div class="bottom-controls">
+      <button id="voiceBtn" class="secondary">🔊 Speak replies: Off</button>
+      <button id="autoBtn" class="secondary">✨ Speak by itself: Off</button>
+      <button id="clearBtn" class="secondary">Clear chat</button>
+    </div>
+
+    <p class="notice">
+      The AI model is downloaded when you press the button. Internet is needed
+      for the initial download. Local AI performance depends on your device.
+    </p>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
